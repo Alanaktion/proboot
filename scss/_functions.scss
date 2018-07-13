@@ -1,0 +1,4 @@
+@function px2rem($value) {
+	// TODO: consider switching to using the $font-size-base variable
+	@return $value/16px * 1rem;
+}
