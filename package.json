@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/Alanaktion/proboot#readme",
   "scripts": {
-    "scss": "node-sass scss/ -o css/ && postcss css/*.css -m --use autoprefixer -r"
+    "scss": "node-sass scss/ -o dist/css/ && postcss dist/css/*.css -m --use autoprefixer -r"
   },
   "dependencies": {
     "bootstrap": "^4.1.2"
