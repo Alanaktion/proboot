@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Proboot</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Alanaktion/proboot/v0.1.1/dist/css/proboot.css" />
     <style>
         @media (min-width: 768px) {
@@ -14,7 +15,30 @@
                 background-repeat: no-repeat;
             }
         }
+        .bash::before {
+            content: '$ ';
+            color: #646a71;
+        }
     </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>
+        .hljs {
+            padding: 0;
+            background-color: transparent;
+            color: inherit;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scss.min.js" defer></script>
+    <script async>
+        window.addEventListener('DOMContentLoaded', function() {
+            hljs.configure({
+                languages: ['scss', 'html'],
+            });
+            hljs.initHighlightingOnLoad();
+        });
+    </script>
 </head>
 <body>
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
@@ -56,11 +80,11 @@
     <section class="container py-5 mt-lg-5" id="getstarted">
         <h1>Get started</h1>
         <p>Proboot is built on Bootstrap 4 and distributed as SCSS source code. Start by installing it with <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">npm</a>:</p>
-        <pre>npm i proboot</pre>
+        <pre class="bash">npm i proboot</pre>
         <p>From here, it is simple to customize and use. Just include it in your SCSS file:</p>
-        <pre>@include 'node_modules/proboot/scss/proboot';</pre>
+        <pre><code class="scss">@include 'node_modules/proboot/scss/proboot';</code></pre>
         <p>If you need to further customize the SCSS, you can override any variables before including <code>proboot</code>, and the changes will take effect across Proboot and Bootstrap. You can also include individual components from Proboot just like with Bootstrap, if you don't need all of them.</p>
-        <pre>// Our own local variables
+        <pre><code class="scss">// Our own local variables
 $primary: '#800f02';
 @include 'variables';
 
@@ -71,15 +95,15 @@ $primary: '#800f02';
 @include 'node_modules/proboot/scss/variables';
 @include 'node_modules/proboot/scss/core';
 @include 'node_modules/proboot/scss/alert';
-@include 'node_modules/proboot/scss/button';</pre>
+@include 'node_modules/proboot/scss/button';</code></pre>
 
         <h2 class="mt-lg-6">Using without SCSS</h2>
         <p>If you'd prefer to include a traditional CSS file, it is also included in the npm releases:</p>
-        <pre>&lt;link rel="stylesheet" href="/node_modules/dist/css/proboot.css"&gt;</pre>
+        <pre><code class="html">&lt;link rel="stylesheet" href="/node_modules/dist/css/proboot.css"&gt;</code></pre>
 
         <h2 class="mt-lg-6">Using without npm</h2>
         <p>If you don't want to install with npm, you can use a CDN-hosted compiled CSS file instead:</p>
-        <pre>&lt;link rel="stylesheet" href="<a href="https://cdn.rawgit.com/Alanaktion/proboot/v0.1.1/dist/css/proboot.css" target="_blank" rel="noopener noreferrer">https://cdn.rawgit.com/Alanaktion/proboot/v0.1.1/dist/css/proboot.css</a>"&gt;</pre>
+        <pre><code class="html">&lt;link rel="stylesheet" href="<a href="https://cdn.rawgit.com/Alanaktion/proboot/v0.1.1/dist/css/proboot.css" target="_blank" rel="noopener noreferrer">https://cdn.rawgit.com/Alanaktion/proboot/v0.1.1/dist/css/proboot.css</a>"&gt;</code></pre>
         <p>Alternatively, just download the compiled CSS from the GitHub repo.</p>
     </section>
 
