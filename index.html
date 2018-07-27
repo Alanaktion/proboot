@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Proboot</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Alanaktion/proboot/3229c39ebc7b2ecfe03a592875378e366727e882/dist/css/proboot.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Alanaktion/proboot/v0.1.1/dist/css/proboot.css" />
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <span class="navbar-brand">Proboot</span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -17,11 +17,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="#getstarted">Get Started</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#components">Components</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/Alanaktion/proboot">GitHub</a>
                     </li>
                 </ul>
             </div>
@@ -39,17 +44,42 @@
         </div>
     </section>
 
-    <section class="container my-3 my-lg-5" id="getstarted">
+    <section class="container my-5 my-lg-7" id="getstarted">
         <h1>Get started</h1>
-        <!-- TODO: add getting started info -->
+        <p>Proboot is built on Bootstrap 4 and distributed as SCSS source code. Start by installing it with <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">npm</a>:</p>
+        <pre>npm i proboot</pre>
+        <p>From here, it is simple to customize and use. Just include it in your SCSS file:</p>
+        <pre>@include 'node_modules/proboot/scss/proboot';</pre>
+        <p>If you need to further customize the SCSS, you can override any variables before including <code>proboot</code>, and the changes will take effect across Proboot and Bootstrap. You can also include individual components from Proboot just like with Bootstrap, if you don't need all of them.</p>
+        <pre>// Our own local variables
+$primary: '#800f02';
+@include 'variables';
+
+// Bootstrap core (this can be replaced with individual components)
+@include 'node_modules/bootstrap/scss/bootstrap';
+
+// Proboot variables and a few components
+@include 'node_modules/proboot/scss/variables';
+@include 'node_modules/proboot/scss/core';
+@include 'node_modules/proboot/scss/alert';
+@include 'node_modules/proboot/scss/button';</pre>
+
+        <h2 class="mt-lg-6">Using without SCSS</h2>
+        <p>If you'd prefer to include a traditional CSS file, it is also included in the npm releases:</p>
+        <pre>&lt;link rel="stylesheet" href="/node_modules/dist/css/proboot.css"&gt;</pre>
+
+        <h2 class="mt-lg-6">Using without npm</h2>
+        <p>If you don't want to install with npm, you can use a CDN-hosted compiled CSS file instead:</p>
+        <pre>&lt;link rel="stylesheet" href="https://cdn.rawgit.com/Alanaktion/proboot/v0.1.1/dist/css/proboot.css"&gt;</pre>
     </section>
 
-    <section class="container my-3 my-lg-5" id="components">
+    <section class="container my-5 my-lg-7" id="components">
         <h1>Components</h1>
-        <!-- TODO: add components -->
+        <p>Proboot includes all of the components from <a href="https://tabler.github.io/tabler/" target="_blank" rel="noopener noreferrer">Tabler</a> that don't require additional JavaScript.</p>
+        <div class="alert alert-info">More details on available components and their usage is coming soon! Check out the Tabler docs for now.</div>
     </section>
 
-    <footer class="bg-light my-3 my-lg-5">
+    <footer class="bg-light mt-5 mt-lg-7 py-5">
         <div class="container">
             &copy; 2018
         </div>
