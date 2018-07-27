@@ -18,3 +18,4 @@ Then just include Proboot in your SCSS file:
 @import 'node_modules/proboot/scss/proboot';
 ```
 
+You can override any of the standard Bootstrap variables, and the Proboot ones, by defining them before importing proboot. If you only need certain components, they can be imported individually instead of including the main proboot file.
