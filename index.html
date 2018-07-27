@@ -6,6 +6,15 @@
     <title>Proboot</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Alanaktion/proboot/v0.1.1/dist/css/proboot.css" />
+    <style>
+        @media (min-width: 768px) {
+            .jumbotron {
+                background-image: url("img/top-bg.min.svg");
+                background-size: auto 100%;
+                background-repeat: no-repeat;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
@@ -71,6 +80,7 @@ $primary: '#800f02';
         <h2 class="mt-lg-6">Using without npm</h2>
         <p>If you don't want to install with npm, you can use a CDN-hosted compiled CSS file instead:</p>
         <pre>&lt;link rel="stylesheet" href="<a href="https://cdn.rawgit.com/Alanaktion/proboot/v0.1.1/dist/css/proboot.css" target="_blank" rel="noopener noreferrer">https://cdn.rawgit.com/Alanaktion/proboot/v0.1.1/dist/css/proboot.css</a>"&gt;</pre>
+        <p>Alternatively, just download the compiled CSS from the GitHub repo.</p>
     </section>
 
     <section class="container py-5" id="components">
