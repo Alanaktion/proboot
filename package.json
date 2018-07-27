@@ -19,7 +19,7 @@
     "scss": "node-sass scss/ -o dist/css/ && postcss dist/css/*.css -m --use autoprefixer -r",
     "lint": "stylelint --syntax scss \"scss/**/*.scss\"",
     "fix": "stylelint --syntax scss \"scss/**/*.scss\" --fix",
-    "prepublishOnly": "scss"
+    "prepublishOnly": "npm run scss"
   },
   "sass": "scss/proboot.scss",
   "dependencies": {
