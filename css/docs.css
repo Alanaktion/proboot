@@ -1,0 +1,37 @@
+/* Temporary workarounds */
+body {
+  height: auto;
+}
+
+/* Jumbotron */
+@media (min-width: 768px) {
+  .jumbotron {
+    background-image: url("img/top-bg.min.svg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+/* Bash style */
+.bash::before {
+  content: '$ ';
+  color: #a8b4c3;
+}
+
+/* Examples */
+.card-example .card-body .selectgroup {
+  min-width: 70%;
+}
+.card-example .card-footer {
+  padding: 0;
+}
+.card-example .card-footer pre {
+  margin: 0;
+}
+
+/* Code highlights */
+.hljs {
+  padding: 0;
+  background-color: transparent;
+  color: inherit;
+}

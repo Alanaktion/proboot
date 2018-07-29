@@ -7,28 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Alanaktion/proboot/v0.1.1/dist/css/proboot.css" />
-    <style>
-        @media (min-width: 768px) {
-            .jumbotron {
-                background-image: url("img/top-bg.min.svg");
-                background-size: auto 100%;
-                background-repeat: no-repeat;
-            }
-        }
-        .bash::before {
-            content: '$ ';
-            color: #a8b4c3;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <link rel="stylesheet" type="text/css" href="css/docs.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-    <style>
-        .hljs {
-            padding: 0;
-            background-color: transparent;
-            color: inherit;
-        }
-    </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scss.min.js" defer></script>
     <script async>
@@ -97,11 +78,11 @@ $primary: '#800f02';
 @include 'node_modules/proboot/scss/alert';
 @include 'node_modules/proboot/scss/button';</code></pre>
 
-        <h2 class="mt-lg-6">Using without SCSS</h2>
+        <h3 class="mt-lg-6">Using without SCSS</h3>
         <p>If you'd prefer to include a traditional CSS file, it is also included in the npm releases:</p>
         <pre><code class="html">&lt;link rel="stylesheet" href="/node_modules/dist/css/proboot.css"&gt;</code></pre>
 
-        <h2 class="mt-lg-6">Using without npm</h2>
+        <h3 class="mt-lg-6">Using without npm</h3>
         <p>If you don't want to install with npm, you can use a CDN-hosted compiled CSS file instead:</p>
         <pre><code class="html">&lt;link rel="stylesheet" href="<a href="https://cdn.rawgit.com/Alanaktion/proboot/v0.1.1/dist/css/proboot.css" target="_blank" rel="noopener noreferrer">https://cdn.rawgit.com/Alanaktion/proboot/v0.1.1/dist/css/proboot.css</a>"&gt;</code></pre>
         <p>Alternatively, just download the compiled CSS from the GitHub repo.</p>
@@ -109,8 +90,138 @@ $primary: '#800f02';
 
     <section class="container py-5" id="components">
         <h1>Components</h1>
-        <p>Proboot includes all of the components from <a href="https://tabler.github.io/tabler/" target="_blank" rel="noopener noreferrer">Tabler</a> that don't require additional JavaScript.</p>
-        <div class="alert alert-info">More details on available components and their usage is coming soon! Check out the <a href="https://tabler.github.io/tabler/" class="alert-link" target="_blank" rel="noopener noreferrer">Tabler docs</a> for now.</div>
+        <p>Proboot includes most of the components from <a href="https://tabler.github.io/tabler/" target="_blank" rel="noopener noreferrer">Tabler</a> that don't require additional JavaScript.</p>
+
+        <h3 class="mt-lg-6">Buttons</h3>
+        <div class="card card-example">
+            <div class="card-body">
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-link">Link</button>
+            </div>
+            <div class="card-footer">
+                <pre><code class="html">&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button type="button" class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+&lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
+&lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+&lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;</code></pre>
+            </div>
+        </div>
+
+        <h3 class="mt-lg-6">Alerts</h3>
+        <div class="card card-example">
+            <div class="card-body">
+                <div class="alert alert-primary" role="alert">
+                    This is a primary alert—check it out!
+                </div>
+                <div class="alert alert-secondary" role="alert">
+                    This is a secondary alert—check it out!
+                </div>
+                <div class="alert alert-success" role="alert">
+                    This is a success alert—check it out!
+                </div>
+                <div class="alert alert-info" role="alert">
+                    This is a info alert—check it out!
+                </div>
+                <div class="alert alert-warning" role="alert">
+                    This is a warning alert—check it out!
+                </div>
+                <div class="alert alert-danger" role="alert">
+                    This is a danger alert—check it out!
+                </div>
+            </div>
+            <div class="card-footer">
+                <pre><code class="html">&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  This is a primary alert—check it out!
+&lt;/div&gt;
+&lt;div class=&quot;alert alert-secondary&quot; role=&quot;alert&quot;&gt;
+  This is a secondary alert—check it out!
+&lt;/div&gt;
+&lt;div class=&quot;alert alert-success&quot; role=&quot;alert&quot;&gt;
+  This is a success alert—check it out!
+&lt;/div&gt;
+&lt;div class=&quot;alert alert-info&quot; role=&quot;alert&quot;&gt;
+  This is a info alert—check it out!
+&lt;/div&gt;
+&lt;div class=&quot;alert alert-warning&quot; role=&quot;alert&quot;&gt;
+  This is a warning alert—check it out!
+&lt;/div&gt;
+&lt;div class=&quot;alert alert-danger&quot; role=&quot;alert&quot;&gt;
+  This is a danger alert—check it out!
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+
+        <h3 class="mt-lg-6">Form components</h3>
+        <div class="card card-example">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md">
+                        <label class="form-label">Select group</label>
+                        <div class="selectgroup">
+                            <label class="selectgroup-item">
+                                <input type="radio" name="value" value="50" class="selectgroup-input" checked="">
+                                <span class="selectgroup-button">S</span>
+                            </label>
+                            <label class="selectgroup-item">
+                                <input type="radio" name="value" value="100" class="selectgroup-input">
+                                <span class="selectgroup-button">M</span>
+                            </label>
+                            <label class="selectgroup-item">
+                                <input type="radio" name="value" value="150" class="selectgroup-input">
+                                <span class="selectgroup-button">L</span>
+                            </label>
+                            <label class="selectgroup-item">
+                                <input type="radio" name="value" value="200" class="selectgroup-input">
+                                <span class="selectgroup-button">XL</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="form-label">Toggle switch</div>
+                        <label class="custom-switch">
+                            <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input">
+                            <span class="custom-switch-indicator"></span>
+                            <span class="custom-switch-description">I agree with terms and conditions</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <pre><code class="html">&lt;div class="selectgroup"&gt;
+    &lt;label class="selectgroup-item"&gt;
+        &lt;input type="radio" name="value" value="50" class="selectgroup-input" checked&gt;
+        &lt;span class="selectgroup-button"&gt;S&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class="selectgroup-item"&gt;
+        &lt;input type="radio" name="value" value="100" class="selectgroup-input"&gt;
+        &lt;span class="selectgroup-button"&gt;M&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class="selectgroup-item"&gt;
+        &lt;input type="radio" name="value" value="150" class="selectgroup-input"&gt;
+        &lt;span class="selectgroup-button"&gt;L&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class="selectgroup-item"&gt;
+        &lt;input type="radio" name="value" value="200" class="selectgroup-input"&gt;
+        &lt;span class="selectgroup-button"&gt;XL&lt;/span&gt;
+    &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;label class="custom-switch"&gt;
+    &lt;input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"&gt;
+    &lt;span class="custom-switch-indicator"&gt;&lt;/span&gt;
+    &lt;span class="custom-switch-description"&gt;I agree with terms and conditions&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="alert alert-info mt-lg-7">More details on available components and their usage is coming soon! Check out the <a href="https://tabler.github.io/tabler/" class="alert-link" target="_blank" rel="noopener noreferrer">Tabler docs</a> for now.</div>
     </section>
 
     <footer class="bg-light mt-5 mt-lg-7 py-5">
