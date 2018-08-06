@@ -6,7 +6,7 @@ body {
 /* Jumbotron */
 @media (min-width: 768px) {
   .jumbotron {
-    background-image: url("img/top-bg.min.svg");
+    background-image: url("../img/top-bg.min.svg");
     background-size: auto 100%;
     background-repeat: no-repeat;
   }
