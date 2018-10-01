@@ -1,19 +1,19 @@
-.nav-link,
-.nav-item {
-  padding: 0 .75rem;
-  min-width: 2rem;
-  transition: .3s color;
-  user-select: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+.navbar-nav {
+  .nav-link,
+  .nav-item {
+    transition: .3s color;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 
-  .badge {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: .2rem .25rem;
-    min-width: 1rem;
+    .badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: .2rem .25rem;
+      min-width: 1rem;
+    }
   }
 }
 
@@ -84,7 +84,7 @@
       display: block;
       padding: .5rem 1rem;
       color: $text-muted;
-      margin: 0 !important;
+      margin: 0;
       cursor: pointer;
       transition: .3s background;
 
@@ -99,9 +99,4 @@
       }
     }
   }
-}
-
-.nav-link {
-  //display: block;
-  //padding: 0.25rem 0.75rem;
 }
