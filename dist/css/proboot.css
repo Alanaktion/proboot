@@ -10824,6 +10824,8 @@ Icon input
   display: inline-flex;
   align-items: center;
   margin: 0; }
+  .custom-switch.custom-switch-right {
+    display: flex; }
 
 .custom-switch-input {
   position: absolute;
@@ -10864,6 +10866,9 @@ Icon input
   .custom-switch-input:focus ~ .custom-switch-indicator {
     box-shadow: 0 0 0 2px rgba(70, 127, 207, 0.25);
     border-color: #467fcf; }
+  .custom-switch-right .custom-switch-indicator {
+    order: 1;
+    margin-left: auto; }
 
 .custom-switch-description {
   margin-left: .5rem;
@@ -10871,6 +10876,9 @@ Icon input
   transition: .3s color; }
   .custom-switch-input:checked ~ .custom-switch-description {
     color: #495057; }
+  .custom-switch-right .custom-switch-description {
+    margin-left: 0;
+    margin-right: .5rem; }
 
 .imagecheck {
   margin: 0;

@@ -8,6 +8,9 @@ $custom-switch-padding: 1px !default;
   display: inline-flex;
   align-items: center;
   margin: 0;
+  &.custom-switch-right {
+    display: flex;
+  }
 }
 
 .custom-switch-input {
@@ -61,6 +64,11 @@ $custom-switch-padding: 1px !default;
     box-shadow: $input-btn-focus-box-shadow;
     border-color: $primary;
   }
+
+  .custom-switch-right & {
+    order: 1;
+    margin-left: auto;
+  }
 }
 
 .custom-switch-description {
@@ -70,5 +78,10 @@ $custom-switch-padding: 1px !default;
 
   .custom-switch-input:checked ~ & {
     color: $body-color;
+  }
+
+  .custom-switch-right & {
+    margin-left: 0;
+    margin-right: .5rem;
   }
 }
