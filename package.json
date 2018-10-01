@@ -27,11 +27,11 @@
   },
   "devDependencies": {
     "autoprefixer": "^8.6.5",
-    "node-sass": "^4.9.2",
+    "node-sass": "^4.9.3",
     "postcss-cli": "^5.0.1",
-    "stylelint": "^9.4.0",
+    "stylelint": "^9.6.0",
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-config-standard": "^18.2.0",
-    "stylelint-scss": "^3.2.0"
+    "stylelint-scss": "^3.3.1"
   }
 }
