@@ -9231,14 +9231,6 @@ button.bg-lime:focus {
     top: .5rem;
     left: .75rem; }
 
-.close {
-  font-size: 1rem;
-  line-height: 1.5;
-  transition: .3s color; }
-  .close::before {
-    content: "\ea00";
-    font-family: feather, sans-serif; }
-
 .badge {
   color: #fff; }
 
