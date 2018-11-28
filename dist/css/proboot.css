@@ -10726,8 +10726,10 @@ Icon input
   flex-direction: column; }
 
 .selectgroup-item {
-  flex-grow: 1;
-  position: relative; }
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: stretch; }
 
 .selectgroup:not(.selectgroup-vertical) > .selectgroup-item + .selectgroup-item {
   margin-left: -1px; }
@@ -10778,23 +10780,21 @@ Icon input
   font-size: 0.9375rem;
   line-height: 1.5rem;
   min-width: 2.375rem; }
+  .selectgroup-input:checked + .selectgroup-button {
+    border-color: #467fcf;
+    color: #467fcf;
+    z-index: 1;
+    background-color: #edf2fa; }
+  .selectgroup-input:focus + .selectgroup-button {
+    border-color: #467fcf;
+    color: #467fcf;
+    z-index: 2;
+    box-shadow: 0 0 0 2px rgba(70, 127, 207, 0.25); }
 
 .selectgroup-button-icon {
   padding-left: .5rem;
   padding-right: .5rem;
   font-size: 1rem; }
-
-.selectgroup-input:checked + .selectgroup-button {
-  border-color: #467fcf;
-  z-index: 1;
-  color: #467fcf;
-  background: #edf2fa; }
-
-.selectgroup-input:focus + .selectgroup-button {
-  border-color: #467fcf;
-  z-index: 2;
-  color: #467fcf;
-  box-shadow: 0 0 0 2px rgba(70, 127, 207, 0.25); }
 
 .selectgroup-pills {
   flex-wrap: wrap;

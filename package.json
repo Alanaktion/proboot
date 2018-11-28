@@ -1,6 +1,6 @@
 {
   "name": "proboot",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "An opinionated Bootstrap 4 theme for web apps",
   "repository": {
     "type": "git",
@@ -27,11 +27,11 @@
   },
   "devDependencies": {
     "autoprefixer": "^8.6.5",
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.10.0",
     "postcss-cli": "^5.0.1",
-    "stylelint": "^9.6.0",
+    "stylelint": "^9.9.0",
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-config-standard": "^18.2.0",
-    "stylelint-scss": "^3.3.1"
+    "stylelint-scss": "^3.4.0"
   }
 }

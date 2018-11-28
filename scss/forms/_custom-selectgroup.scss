@@ -7,8 +7,10 @@
 }
 
 .selectgroup-item {
-  flex-grow: 1;
+  flex: 1;
   position: relative;
+  display: flex;
+  align-items: stretch;
 }
 
 .selectgroup:not(.selectgroup-vertical) > .selectgroup-item {
@@ -58,37 +60,35 @@
 
 .selectgroup-button {
   display: block;
-  border: 1px solid $input-border-color;
+  border: 1px solid $selectgroup-border-color;
   text-align: center;
   padding: $input-btn-padding-y 1rem;
   position: relative;
   cursor: pointer;
   border-radius: 3px;
-  color: $text-muted;
+  color: $selectgroup-color;
   user-select: none;
   font-size: $font-size-base;
   line-height: 1.5rem;
   min-width: $input-height;
+  .selectgroup-input:checked + & {
+    border-color: $selectgroup-active-border-color;
+    color: $selectgroup-active-color;
+    z-index: 1;
+    background-color: $selectgroup-active-bg;
+  }
+  .selectgroup-input:focus + & {
+    border-color: $selectgroup-active-border-color;
+    color: $selectgroup-active-color;
+    z-index: 2;
+    box-shadow: $input-btn-focus-box-shadow;
+  }
 }
 
 .selectgroup-button-icon {
   padding-left: .5rem;
   padding-right: .5rem;
   font-size: 1rem;
-}
-
-.selectgroup-input:checked + .selectgroup-button {
-  border-color: $primary;
-  z-index: 1;
-  color: $primary;
-  background: mix(#fff, $primary, 90%);
-}
-
-.selectgroup-input:focus + .selectgroup-button {
-  border-color: $primary;
-  z-index: 2;
-  color: $primary;
-  box-shadow: $input-btn-focus-box-shadow;
 }
 
 .selectgroup-pills {

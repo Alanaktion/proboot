@@ -249,16 +249,6 @@ $footer-bg: #fff !default;
 $dropdown-border-color: $border-color !default;
 $dropdown-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05) !default;
 
-// Z-index
-$zindex-overlay: 900 !default;
-$zindex-dropdown: 1000 !default;
-$zindex-sticky: 1020 !default;
-$zindex-fixed: 1030 !default;
-$zindex-modal-backdrop: 1040 !default;
-$zindex-modal: 1050 !default;
-$zindex-popover: 1060 !default;
-$zindex-tooltip: 1070 !default;
-
 // Components
 $border-radius: 3px !default;
 $border-radius-lg: 3px !default;
@@ -306,3 +296,10 @@ $pagination-disabled-color: $gray-400 !default;
 
 // Navs
 $nav-tabs-link-active-bg: transparent !default;
+
+// Select Group
+$selectgroup-color: $text-muted !default;
+$selectgroup-border-color: $input-border-color !default;
+$selectgroup-active-bg: mix(#fff, $primary, 90%) !default;
+$selectgroup-active-color: $primary !default;
+$selectgroup-active-border-color: $primary !default;
