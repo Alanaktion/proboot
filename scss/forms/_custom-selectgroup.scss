@@ -60,6 +60,7 @@
 
 .selectgroup-button {
   display: block;
+  flex: 1;
   border: 1px solid $selectgroup-border-color;
   text-align: center;
   padding: $input-btn-padding-y 1rem;
