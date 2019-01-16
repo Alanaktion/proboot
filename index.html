@@ -6,7 +6,7 @@
     <title>Proboot</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Alanaktion/proboot/v0.1.2/dist/css/proboot.css" />
+    <link rel="stylesheet" type="text/css" href="https://rawcdn.githack.com/Alanaktion/proboot/v0.2.0/dist/css/proboot.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
     <link rel="stylesheet" type="text/css" href="css/docs.css" />
 
@@ -61,7 +61,7 @@
     <section class="container py-5 mt-lg-5" id="getstarted">
         <h1>Get started</h1>
         <p>Proboot is built on Bootstrap 4 and distributed as SCSS source code. Start by installing it with <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">npm</a>:</p>
-        <pre class="bash">npm i proboot</pre>
+        <pre class="bash">npm i --save proboot</pre>
         <p>From here, it is simple to customize and use. Just include it in your SCSS file:</p>
         <pre><code class="scss">@include 'node_modules/proboot/scss/proboot';</code></pre>
         <p>If you need to further customize the SCSS, you can override any variables before including <code>proboot</code>, and the changes will take effect across Proboot and Bootstrap. You can also include individual components from Proboot just like with Bootstrap, if you don't need all of them.</p>
@@ -84,7 +84,7 @@ $primary: '#800f02';
 
         <h3 class="mt-lg-6">Using without npm</h3>
         <p>If you don't want to install with npm, you can use a CDN-hosted compiled CSS file instead:</p>
-        <pre><code class="html">&lt;link rel="stylesheet" href="<a href="https://cdn.rawgit.com/Alanaktion/proboot/v0.1.1/dist/css/proboot.css" target="_blank" rel="noopener noreferrer">https://cdn.rawgit.com/Alanaktion/proboot/v0.1.1/dist/css/proboot.css</a>"&gt;</code></pre>
+        <pre><code class="html">&lt;link rel="stylesheet" href="<a href="https://rawcdn.githack.com/Alanaktion/proboot/v0.2.0/dist/css/proboot.css" target="_blank" rel="noopener noreferrer">https://rawcdn.githack.com/Alanaktion/proboot/v0.2.0/dist/css/proboot.css</a>"&gt;</code></pre>
         <p>Alternatively, just download the compiled CSS from the GitHub repo.</p>
     </section>
 
@@ -182,19 +182,19 @@ $primary: '#800f02';
                                 <span class="selectgroup-button">XL</span>
                             </label>
                         </div>
+                        <p class="mt-3 text-primary">Since Proboot 0.2 select groups support different content lengths in each item.</p>
                     </div>
                     <div class="col-md">
                         <div class="form-label">Toggle switch</div>
-                        <label class="custom-switch">
-                            <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input">
-                            <span class="custom-switch-indicator"></span>
-                            <span class="custom-switch-description">Email notifications</span>
-                        </label>
-                        <label class="custom-switch custom-switch-right" style="max-width: 200px;">
-                            <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input">
-                            <span class="custom-switch-indicator"></span>
-                            <span class="custom-switch-description">Email notifications</span>
-                        </label>
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                            <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+                        </div>
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" disabled id="customSwitch2">
+                            <label class="custom-control-label" for="customSwitch2">Disabled switch element</label>
+                        </div>
+                        <p class="alert alert-info mt-3 mb-0"><b>Heads up!</b> Switches changed in Proboot 0.2 to use Bootstrap 4.2's new switch component. HTML from before 0.2 will need to be updated.</p>
                     </div>
                 </div>
             </div>
@@ -218,16 +218,14 @@ $primary: '#800f02';
     &lt;/label&gt;
 &lt;/div&gt;
 
-&lt;label class="custom-switch"&gt;
-    &lt;input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"&gt;
-    &lt;span class="custom-switch-indicator"&gt;&lt;/span&gt;
-    &lt;span class="custom-switch-description"&gt;Email notifications&lt;/span&gt;
-&lt;/label&gt;
-&lt;label class="custom-switch custom-switch-right"&gt;
-    &lt;input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"&gt;
-    &lt;span class="custom-switch-indicator"&gt;&lt;/span&gt;
-    &lt;span class="custom-switch-description"&gt;Email notifications&lt;/span&gt;
-&lt;/label&gt;</code></pre>
+&lt;div class="custom-control custom-switch"&gt;
+    &lt;input type="checkbox" class="custom-control-input" id="customSwitch1"&gt;
+    &lt;label class="custom-control-label" for="customSwitch1"&gt;Toggle this switch element&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="custom-control custom-switch"&gt;
+    &lt;input type="checkbox" class="custom-control-input" disabled id="customSwitch2"&gt;
+    &lt;label class="custom-control-label" for="customSwitch2"&gt;Disabled switch element&lt;/label&gt;
+&lt;/div&gt;</code></pre>
             </div>
         </div>
 
