@@ -7,6 +7,12 @@
     display: flex;
     align-items: center;
 
+    // Fix display of dropdowns in responsive navbars
+    .navbar-collapse.show & {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
     .badge {
       position: absolute;
       top: 0;

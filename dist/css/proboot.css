@@ -9317,6 +9317,10 @@ button.bg-lime:focus {
   cursor: pointer;
   display: flex;
   align-items: center; }
+  .navbar-collapse.show .navbar-nav .nav-link, .navbar-collapse.show
+  .navbar-nav .nav-item {
+    align-items: flex-start;
+    flex-direction: column; }
   .navbar-nav .nav-link .badge,
   .navbar-nav .nav-item .badge {
     position: absolute;
