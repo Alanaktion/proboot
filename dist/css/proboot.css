@@ -9325,7 +9325,7 @@ button.bg-lime:focus {
     padding: .2rem .25rem;
     min-width: 1rem; }
 
-.navbar-collapse.show .navbar-nav .navbar-item {
+.navbar-collapse.show .navbar-nav .nav-item {
   align-items: flex-start;
   flex-direction: column; }
 
