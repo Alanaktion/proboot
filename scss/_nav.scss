@@ -7,18 +7,20 @@
     display: flex;
     align-items: center;
 
-    // Fix display of dropdowns in responsive navbars
-    .navbar-collapse.show & {
-      align-items: flex-start;
-      flex-direction: column;
-    }
-
     .badge {
       position: absolute;
       top: 0;
       right: 0;
       padding: .2rem .25rem;
       min-width: 1rem;
+    }
+  }
+
+  .navbar-item {
+    // Fix display of dropdowns in responsive navbars
+    .navbar-collapse.show & {
+      align-items: flex-start;
+      flex-direction: column;
     }
   }
 }

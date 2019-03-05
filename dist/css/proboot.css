@@ -9317,10 +9317,6 @@ button.bg-lime:focus {
   cursor: pointer;
   display: flex;
   align-items: center; }
-  .navbar-collapse.show .navbar-nav .nav-link, .navbar-collapse.show
-  .navbar-nav .nav-item {
-    align-items: flex-start;
-    flex-direction: column; }
   .navbar-nav .nav-link .badge,
   .navbar-nav .nav-item .badge {
     position: absolute;
@@ -9328,6 +9324,10 @@ button.bg-lime:focus {
     right: 0;
     padding: .2rem .25rem;
     min-width: 1rem; }
+
+.navbar-collapse.show .navbar-nav .navbar-item {
+  align-items: flex-start;
+  flex-direction: column; }
 
 .nav-tabs {
   -webkit-user-select: none;
