@@ -9185,13 +9185,6 @@ button.bg-lime-darkest:hover,
 button.bg-lime-darkest:focus {
   background-color: #010200 !important; }
 
-.display-1 i,
-.display-2 i,
-.display-3 i,
-.display-4 i {
-  vertical-align: baseline;
-  font-size: .815em; }
-
 .text-inherit {
   color: inherit !important; }
 
