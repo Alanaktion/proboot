@@ -1,20 +1,20 @@
 .chat {
-  outline: 0;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   min-height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  outline: 0;
 }
 
 .chat-line {
-  padding: 0;
-  text-align: right;
   position: relative;
   display: flex;
   flex-direction: row-reverse;
+  padding: 0;
+  text-align: right;
 
   & + & {
     padding-top: 1rem;
@@ -24,28 +24,28 @@
 .chat-message {
   position: relative;
   display: inline-block;
-  background-color: $primary;
-  color: #fff;
-  font-size: px2rem(14px);
   padding: .375rem .5rem;
-  border-radius: 3px;
-  white-space: normal;
-  text-align: left;
   margin: 0 .5rem 0 2.5rem;
+  font-size: px2rem(14px);
   line-height: 1.4;
+  color: #fff;
+  text-align: left;
+  white-space: normal;
+  background-color: $primary;
+  border-radius: 3px;
 
   > :last-child {
     margin-bottom: 0 !important;
   }
 
   &::after {
-    content: "";
     position: absolute;
-    right: -5px;
     top: 7px;
+    right: -5px;
+    content: "";
+    border-top: 6px solid transparent;
     border-bottom: 6px solid transparent;
     border-left: 6px solid $primary;
-    border-top: 6px solid transparent;
   }
 
   img {
@@ -73,16 +73,16 @@
   }
 
   .chat-message {
-    background-color: #f3f3f3;
-    color: $body-color;
-    margin-left: .5rem;
     margin-right: 2.5rem;
+    margin-left: .5rem;
+    color: $body-color;
+    background-color: #f3f3f3;
 
     &::after {
       right: auto;
       left: -5px;
-      border-left-width: 0;
       border-right: 5px solid #f3f3f3;
+      border-left-width: 0;
     }
   }
 }

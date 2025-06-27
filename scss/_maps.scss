@@ -1,7 +1,7 @@
 .map,
 .chart {
   position: relative;
-  padding-top: (9/16) *100%;
+  padding-top: calc(9 / 16 * 100%);
 }
 
 .map-square,
@@ -13,26 +13,26 @@
 .chart-content {
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
 }
 
 .map-header {
+  position: relative;
+  height: 15rem;
   margin-top: -1.5rem;
   margin-bottom: -1.5rem;
-  height: 15rem;
-  position: relative;
 
   &::before {
-    content: "";
     position: absolute;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
     height: 10rem;
-    background: linear-gradient(to bottom, rgba($body-bg, 0) 5%, $body-bg 95%);
     pointer-events: none;
+    content: "";
+    background: linear-gradient(to bottom, rgba($body-bg, 0) 5%, $body-bg 95%);
   }
 }
 
@@ -41,9 +41,9 @@
 }
 
 .map-static {
-  height: 120px;
   width: 100%;
   max-width: 640px;
+  height: 120px;
   background-position: center center;
   background-size: 640px 120px;
 }

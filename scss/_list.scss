@@ -3,9 +3,9 @@
 
     + .list-inline-item {
       &::before {
-        content: "· ";
-        margin-left: -2px;
         margin-right: 3px;
+        margin-left: -2px;
+        content: "· ";
       }
     }
   }

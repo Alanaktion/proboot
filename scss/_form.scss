@@ -8,14 +8,14 @@ textarea {
 .form-label {
   display: block;
   margin-bottom: .375rem;
-  font-weight: 600;
   font-size: px2rem(14px);
+  font-weight: 600;
 }
 
 .form-label-small {
   float: right;
-  font-weight: 400;
   font-size: $small-font-size;
+  font-weight: 400;
 }
 
 .form-footer {
@@ -36,9 +36,9 @@ textarea {
   vertical-align: middle;
 
   &::before {
-    border: 1px solid $input-border-color;
     background-color: #fff;
     background-size: .5rem;
+    border: 1px solid $input-border-color;
   }
 }
 
@@ -85,26 +85,26 @@ Icon input
   top: 0;
   bottom: 0;
   left: 0;
-  color: $text-muted;
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 2.5rem;
+  color: $text-muted;
   pointer-events: none;
 
   &:last-child {
-    left: auto;
     right: 0;
+    left: auto;
   }
 }
 
 
 .form-fieldset {
+  padding: 1rem;
+  margin-bottom: 1rem;
   background: $gray-100;
   border: 1px solid $gray-200;
-  padding: 1rem;
   border-radius: 3px;
-  margin-bottom: 1rem;
 }
 
 .form-required {
@@ -129,20 +129,20 @@ Icon input
   display: inline-block;
   width: 1rem;
   height: 1rem;
-  text-align: center;
+  font-size: px2rem(12px);
   line-height: 1rem;
   color: $text-muted;
-  background: $gray-100;
-  border-radius: 50%;
-  font-size: px2rem(12px);
-  transition: .3s background-color, .3s color;
+  text-align: center;
   text-decoration: none;
   cursor: pointer;
   user-select: none;
+  background: $gray-100;
+  border-radius: 50%;
+  transition: .3s background-color, .3s color;
 
   &:hover,
   &[aria-describedby] {
-    background: $primary;
     color: #fff;
+    background: $primary;
   }
 }

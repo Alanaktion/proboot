@@ -1,73 +1,73 @@
 .navbar-nav {
   .nav-link,
   .nav-item {
-    transition: .3s color;
-    user-select: none;
-    cursor: pointer;
     display: flex;
     align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: .3s color;
 
     .badge {
       position: absolute;
       top: 0;
       right: 0;
-      padding: .2rem .25rem;
       min-width: 1rem;
+      padding: .2rem .25rem;
     }
   }
 
   .nav-item {
     // Fix display of dropdowns in responsive navbars
     .navbar-collapse.show & {
-      align-items: flex-start;
       flex-direction: column;
+      align-items: flex-start;
     }
   }
 }
 
 .nav-tabs {
-  user-select: none;
-  color: $text-muted;
   margin: 0 -.75rem;
+  color: $text-muted;
+  user-select: none;
 
   .nav-link {
-    border: 0;
-    color: inherit;
-    border-bottom: 1px solid transparent;
-    margin-bottom: -1px;
-    transition: .3s border-color;
-    font-weight: 400;
     padding: 1rem 0;
+    margin-bottom: -1px;
+    font-weight: 400;
+    color: inherit;
+    border: 0;
+    border-bottom: 1px solid transparent;
+    transition: .3s border-color;
 
     &:hover:not(.disabled) {
-      border-color: $text-muted-dark;
       color: $text-muted-dark;
+      border-color: $text-muted-dark;
     }
 
     &.active {
-      border-color: $blue;
       color: $blue;
       background: transparent;
+      border-color: $blue;
     }
 
     &.disabled {
-      opacity: .4;
-      cursor: default;
       pointer-events: none;
+      cursor: default;
+      opacity: .4;
     }
   }
 
   .nav-item {
-    margin-bottom: 0;
     position: relative;
+    margin-bottom: 0;
 
     i {
-      margin-right: .25rem;
-      line-height: 1;
-      font-size: px2rem(14px);
-      width: px2rem(14px);
-      vertical-align: baseline;
       display: inline-block;
+      width: px2rem(14px);
+      margin-right: .25rem;
+      font-size: px2rem(14px);
+      line-height: 1;
+      vertical-align: baseline;
     }
 
     &:hover {
@@ -78,21 +78,21 @@
   }
 
   .nav-submenu {
-    display: none;
     position: absolute;
+    z-index: 10;
+    display: none;
+    min-width: 10rem;
     background: #fff;
     border: 1px solid $border-color;
     border-top: none;
-    z-index: 10;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
-    min-width: 10rem;
     border-radius: 0 0 3px 3px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
 
     .nav-item {
       display: block;
       padding: .5rem 1rem;
-      color: $text-muted;
       margin: 0;
+      color: $text-muted;
       cursor: pointer;
       transition: .3s background;
 

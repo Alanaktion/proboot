@@ -1,14 +1,14 @@
 .stamp {
-  color: #fff;
-  background: $gray-600;
   display: inline-block;
   min-width: 2rem;
   height: 2rem;
   padding: 0 .25rem;
-  line-height: 2rem;
-  text-align: center;
-  border-radius: 3px;
   font-weight: 600;
+  line-height: 2rem;
+  color: #fff;
+  text-align: center;
+  background: $gray-600;
+  border-radius: 3px;
 }
 
 .stamp-md {

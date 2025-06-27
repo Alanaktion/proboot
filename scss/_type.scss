@@ -36,9 +36,9 @@ blockquote {
 }
 
 blockquote {
+  padding-left: 2rem;
   font-style: italic;
   color: $text-muted-dark;
-  padding-left: 2rem;
   border-left: 2px solid $border-color;
 
   p {
@@ -56,16 +56,16 @@ blockquote {
 }
 
 code {
+  padding: 3px;
   background: rgba(0, 0, 0, .025);
   border: 1px solid rgba(#000, .05);
   border-radius: 3px;
-  padding: 3px;
 
   pre & {
     padding: 0;
-    border-radius: 0;
-    border: none;
     background: none;
+    border: none;
+    border-radius: 0;
   }
 }
 
@@ -75,16 +75,16 @@ hr {
 }
 
 pre {
-  color: $gray-800;
   padding: 1rem;
   overflow: auto;
   font-size: 85%;
+  hyphens: none;
   line-height: 1.45;
+  color: $gray-800;
+  text-shadow: 0 1px #fff;
+  tab-size: 4;
   background-color: #f8fafc;
   border-radius: 3px;
-  tab-size: 4;
-  text-shadow: 0 1px #fff;
-  hyphens: none;
 }
 
 img {
@@ -120,16 +120,16 @@ img {
 }
 
 .section-nav {
-  background-color: $gray-100;
-  margin: 1rem 0;
   padding: .5rem 1rem;
+  margin: 1rem 0;
+  list-style: none;
+  background-color: $gray-100;
   border: 1px solid $border-color;
   border-radius: 3px;
-  list-style: none;
 
   &::before {
-    content: "Table of contents:";
     display: block;
     font-weight: 600;
+    content: "Table of contents:";
   }
 }

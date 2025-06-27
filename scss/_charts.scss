@@ -5,23 +5,23 @@ $sizes: (
 ) !default;
 
 .chart-circle {
-  display: block;
-  height: 8rem;
-  width: 8rem;
   position: relative;
+  display: block;
+  width: 8rem;
+  height: 8rem;
 
   canvas {
-    margin: 0 auto;
     display: block;
     max-width: 100%;
     max-height: 100%;
+    margin: 0 auto;
   }
 }
 
 @each $size, $value in $sizes {
   .chart-circle-#{$size} {
-    height: $value;
     width: $value;
+    height: $value;
     font-size: .8rem;
   }
 }
@@ -29,15 +29,15 @@ $sizes: (
 .chart-circle-value {
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
-  margin-left: auto;
-  margin-right: auto;
   bottom: 0;
+  left: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
 
   //font-size: px2rem(24px);
   //font-weight: 600;
@@ -45,7 +45,7 @@ $sizes: (
 
   small {
     display: block;
-    color: $text-muted;
     font-size: px2rem(15px);
+    color: $text-muted;
   }
 }

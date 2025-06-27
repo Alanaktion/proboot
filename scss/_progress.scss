@@ -1,24 +1,26 @@
+@use 'sass:math';
+
 @keyframes indeterminate {
   0% {
-    left: -35%;
     right: 100%;
+    left: -35%;
   }
   100%,
   60% {
-    left: 100%;
     right: -90%;
+    left: 100%;
   }
 }
 
 @keyframes indeterminate-short {
   0% {
-    left: -200%;
     right: 100%;
+    left: -200%;
   }
   100%,
   60% {
-    left: 107%;
     right: -8%;
+    left: 107%;
   }
 }
 
@@ -39,13 +41,13 @@
 .progress-bar-indeterminate {
   &::after,
   &::before {
-    content: "";
     position: absolute;
-    background-color: inherit;
-    left: 0;
-    will-change: left, right;
     top: 0;
     bottom: 0;
+    left: 0;
+    content: "";
+    background-color: inherit;
+    will-change: left, right;
   }
 
   &::before {
@@ -77,12 +79,12 @@ Dimmer
   position: relative;
 
   .loader {
-    display: none;
-    margin: 0 auto;
     position: absolute;
     top: 50%;
-    left: 0;
     right: 0;
+    left: 0;
+    display: none;
+    margin: 0 auto;
     transform: translateY(-50%);
   }
 
@@ -92,8 +94,8 @@ Dimmer
     }
 
     .dimmer-content {
-      opacity: .04;
       pointer-events: none;
+      opacity: .04;
     }
   }
 }
@@ -103,37 +105,37 @@ Loader
 */
 $loader-size: 2.5rem !default;
 .loader {
-  display: block;
   position: relative;
-  height: $loader-size;
+  display: block;
   width: $loader-size;
+  height: $loader-size;
   color: $blue;
 
   &::before,
   &::after {
-    width: $loader-size;
-    height: $loader-size;
-    margin: (- $loader-size / 2) 0 0 (- $loader-size / 2);
     position: absolute;
-    content: "";
     top: 50%;
     left: 50%;
+    width: $loader-size;
+    height: $loader-size;
+    margin: math.div(-$loader-size, 2) 0 0 math.div(-$loader-size, 2);
+    content: "";
   }
 
   &::before {
+    border: 3px solid currentcolor;
     border-radius: 50%;
-    border: 3px solid currentColor;
     opacity: .15;
   }
 
   &::after {
-    animation: loader .6s linear;
-    animation-iteration-count: infinite;
-
-    border-radius: 50%;
     border: 3px solid;
     border-color: transparent;
-    border-top-color: currentColor;
+    border-top-color: currentcolor;
+
+    border-radius: 50%;
     box-shadow: 0 0 0 1px transparent;
+    animation: loader .6s linear;
+    animation-iteration-count: infinite;
   }
 }

@@ -1,0 +1,24 @@
+// stylelint-disable declaration-no-important
+@use 'sass:color';
+
+
+// @mixin hover-focus {
+//   &:hover,
+//   &:focus {
+//     @content;
+//   }
+// }
+
+// Contextual backgrounds
+@mixin bg-variant($parent, $color) {
+  #{$parent} {
+    background-color: $color !important;
+  }
+  a#{$parent},
+  button#{$parent} {
+    &:hover,
+    &:focus {
+      background-color: color.adjust($color, $lightness: -10%) !important;
+    }
+  }
+}

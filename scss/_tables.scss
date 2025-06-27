@@ -1,18 +1,18 @@
 .table {
   thead {
     th {
-      border-top: 0;
-      border-bottom-width: 1px;
       padding-top: .5rem;
       padding-bottom: .5rem;
+      border-top: 0;
+      border-bottom-width: 1px;
     }
   }
 
   th {
-    color: $table-head-color;
-    text-transform: uppercase;
     font-size: $h6-font-size;
     font-weight: 400;
+    // color: $table-head-color;
+    text-transform: uppercase;
   }
 }
 
@@ -52,11 +52,11 @@
 
   td,
   th {
-    border: 0;
-    text-align: center;
+    width: calc(100% / 7);
     padding: 0 !important;
-    width: (100%/7);
     line-height: 2.5rem;
+    text-align: center;
+    border: 0;
   }
 
   td {
@@ -65,25 +65,25 @@
 }
 
 .table-calendar-link {
-  line-height: 2rem;
-  min-width: calc(2rem + 2px);
-  display: inline-block;
-  border-radius: 3px;
-  background: $gray-100;
-  color: $body-color;
-  font-weight: 600;
-  transition: .3s background, .3s color;
   position: relative;
+  display: inline-block;
+  min-width: calc(2rem + 2px);
+  font-weight: 600;
+  line-height: 2rem;
+  color: $body-color;
+  background: $gray-100;
+  border-radius: 3px;
+  transition: .3s background, .3s color;
 
   &::before {
-    content: "";
+    position: absolute;
+    top: .25rem;
+    left: .25rem;
     width: 4px;
     height: 4px;
-    position: absolute;
-    left: .25rem;
-    top: .25rem;
-    border-radius: 50px;
+    content: "";
     background: $primary;
+    border-radius: 50px;
   }
 
   &:hover {
@@ -108,13 +108,13 @@
   }
 
   &::after {
-    content: "\f0dc";
+    display: inline-block;
+    margin-left: .5rem;
     // TODO: remove FontAwesome dependency
     // stylelint-disable-next-line font-family-no-missing-generic-family-keyword
     font-family: FontAwesome;
-    display: inline-block;
-    margin-left: .5rem;
     font-size: .75rem;
+    content: "\f0dc";
   }
 }
 

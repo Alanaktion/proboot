@@ -1,14 +1,14 @@
 .social-links {
   li {
     a {
+      display: inline-block;
+      width: 1.75rem;
+      height: 1.75rem;
+      line-height: 1.75rem;
+      color: $text-muted;
+      text-align: center;
       background: #f8f8f8;
       border-radius: 50%;
-      color: $text-muted;
-      display: inline-block;
-      height: 1.75rem;
-      width: 1.75rem;
-      line-height: 1.75rem;
-      text-align: center;
     }
   }
 }

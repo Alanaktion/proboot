@@ -1,9 +1,9 @@
 .btn {
-  cursor: pointer;
+  min-width: px2rem(38px);
+  font-size: px2rem(13px);
   font-weight: 600;
   letter-spacing: .03em;
-  font-size: px2rem(13px);
-  min-width: px2rem(38px);
+  cursor: pointer;
 
   i {
     font-size: 1rem;
@@ -12,8 +12,8 @@
 }
 
 .btn-icon {
-  padding-left: .5rem;
   padding-right: .5rem;
+  padding-left: .5rem;
   text-align: center;
 }
 
@@ -23,9 +23,9 @@
 }
 
 .btn-pill {
-  border-radius: 10rem;
-  padding-left: 1.5em;
   padding-right: 1.5em;
+  padding-left: 1.5em;
+  border-radius: 10rem;
 }
 
 .btn-square {
@@ -45,27 +45,27 @@
 }
 
 .btn-option {
-  background: transparent;
   color: $text-muted;
+  background: transparent;
 
   &:hover {
     color: $text-muted-dark;
   }
 
   &:focus {
-    box-shadow: none;
     color: $text-muted-dark;
+    box-shadow: none;
   }
 }
 
 .btn-sm {
-  font-size: px2rem(12px);
   min-width: px2rem(26px);
+  font-size: px2rem(12px);
 }
 
 .btn-lg {
-  font-size: px2rem(16px);
   min-width: px2rem(44px);
+  font-size: px2rem(16px);
   font-weight: 400;
 }
 
@@ -84,31 +84,31 @@
 }
 
 .btn-loading {
+  position: relative;
   color: transparent !important;
   pointer-events: none;
-  position: relative;
 
   &::after {
-    content: "";
-    animation: loader 500ms infinite linear;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    border-right-color: transparent !important;
-    border-top-color: transparent !important;
-    display: block;
-    height: 1.4em;
-    width: 1.4em;
-    left: calc(50% - (1.4em / 2));
-    top: calc(50% - (1.4em / 2));
-    transform-origin: center;
     position: absolute !important;
+    top: calc(50% - (1.4em / 2));
+    left: calc(50% - (1.4em / 2));
+    display: block;
+    width: 1.4em;
+    height: 1.4em;
+    content: "";
+    border: 2px solid #fff;
+    border-top-color: transparent !important;
+    border-right-color: transparent !important;
+    border-radius: 50%;
+    transform-origin: center;
+    animation: loader 500ms infinite linear;
   }
 
   &.btn-sm::after{
-    height: 1em;
-    width: 1em;
-    left: calc(50% - (1em / 2));
     top: calc(50% - (1em / 2));
+    left: calc(50% - (1em / 2));
+    width: 1em;
+    height: 1em;
   }
 
   &.btn-secondary::after {

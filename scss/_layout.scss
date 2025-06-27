@@ -29,9 +29,9 @@
 
 .page-header {
   display: flex;
-  align-items: center;
-  margin: 1.5rem 0 1.5rem;
   flex-wrap: wrap;
+  align-items: center;
+  margin: 1.5rem 0;
 }
 
 .page-title {
@@ -42,14 +42,14 @@
 }
 
 .page-title-icon {
-  color: $text-muted;
   font-size: 1.25rem;
+  color: $text-muted;
 }
 
 .page-subtitle {
+  margin-left: 2rem;
   font-size: px2rem(13px);
   color: $text-muted-dark;
-  margin-left: 2rem;
 
   a {
     color: inherit;
@@ -74,17 +74,17 @@
 }
 
 .page-single {
-  flex: 1 1 auto;
   display: flex;
+  flex: 1 1 auto;
   align-items: center;
   justify-content: center;
   padding: 1rem 0;
 }
 
 .content-heading {
-  font-weight: 400;
   margin: 2rem 0 1.5rem;
   font-size: px2rem(20px);
+  font-weight: 400;
   line-height: 1.25;
 
   &:first-child {

@@ -11,15 +11,15 @@
 .link-overlay-bg {
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
-  background: rgba($blue, .8);
+  left: 0;
   display: flex;
-  color: #fff;
   align-items: center;
   justify-content: center;
   font-size: px2rem(20px);
+  color: #fff;
+  background: rgba($blue, .8);
   opacity: 0;
   transition: .3s opacity;
 }

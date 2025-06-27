@@ -1,8 +1,8 @@
 .example {
   padding: 1.5rem;
+  font-size: px2rem(15px);
   border: 1px solid $border-color;
   border-radius: 3px 3px 0 0;
-  font-size: px2rem(15px);
 }
 
 .example-bg {
@@ -10,19 +10,19 @@
 }
 
 .example + .highlight {
-  border-top: none;
   margin-top: 0;
+  border-top: none;
   border-radius: 0 0 3px 3px;
 }
 
 .highlight {
+  max-height: 40rem;
   margin: 1rem 0 2rem;
+  overflow: auto;
+  font-size: px2rem(15px);
+  background: #fcfcfc;
   border: 1px solid $border-color;
   border-radius: 3px;
-  font-size: px2rem(15px);
-  max-height: 40rem;
-  overflow: auto;
-  background: #fcfcfc;
 }
 
 .highlight pre {
