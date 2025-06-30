@@ -6,12 +6,12 @@
     <title>Proboot</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="https://rawcdn.githack.com/Alanaktion/proboot/v0.2.0/dist/css/proboot.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-    <link rel="stylesheet" type="text/css" href="css/docs.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/proboot@0.4/dist/css/proboot.css" />
+    <link rel="stylesheet" type="text/css" href="/css/docs.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github.min.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scss.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/scss.min.js" defer></script>
     <script async>
         window.addEventListener('DOMContentLoaded', function() {
             hljs.configure({
@@ -37,8 +37,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#components">Components</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/examples.html">Examples</a>
+                    </li>
                 </ul>
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="https://github.com/Alanaktion/proboot">GitHub</a>
                     </li>
@@ -47,10 +50,10 @@
         </div>
     </nav>
 
-    <section class="jumbotron text-center">
-        <div class="container">
-            <h1 class="jumbotron-heading">Proboot</h1>
-            <p class="lead">An opinionated Bootstrap 4 theme for web apps</p>
+    <section class="py-5 bg-body-secondary jumbotron text-center">
+        <div class="container py-lg-5">
+            <h1>Proboot</h1>
+            <p class="lead">An opinionated Bootstrap 5 theme for web apps</p>
             <p>
                 <a href="#getstarted" class="btn btn-primary my-2">Get started</a>
                 <a href="https://github.com/Alanaktion/proboot" target="_blank" class="btn btn-secondary my-2">Source code</a>
@@ -60,23 +63,23 @@
 
     <section class="container py-5 mt-lg-5" id="getstarted">
         <h1>Get started</h1>
-        <p>Proboot is built on Bootstrap 4 and distributed as SCSS source code. Start by installing it with <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">npm</a>:</p>
-        <pre class="bash">npm i --save proboot</pre>
-        <p>From here, it is simple to customize and use. Just include it in your SCSS file:</p>
-        <pre><code class="scss">@include 'node_modules/proboot/scss/proboot';</code></pre>
+        <p>Proboot is built on Bootstrap 5 and distributed as SCSS source code. Start by installing it with <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">npm</a>:</p>
+        <pre><code class="bash">npm i --save proboot</code></pre>
+        <p>From here, it is simple to customize and use. Just import it in your SCSS file:</p>
+        <pre><code class="scss">@import 'proboot/scss/proboot';</code></pre>
         <p>If you need to further customize the SCSS, you can override any variables before including <code>proboot</code>, and the changes will take effect across Proboot and Bootstrap. You can also include individual components from Proboot just like with Bootstrap, if you don't need all of them.</p>
         <pre><code class="scss">// Our own local variables
 $primary: '#800f02';
-@include 'variables';
+@import 'variables';
 
 // Bootstrap core (this can be replaced with individual components)
-@include 'node_modules/bootstrap/scss/bootstrap';
+@import 'bootstrap/scss/bootstrap';
 
 // Proboot variables and a few components
-@include 'node_modules/proboot/scss/variables';
-@include 'node_modules/proboot/scss/core';
-@include 'node_modules/proboot/scss/alert';
-@include 'node_modules/proboot/scss/button';</code></pre>
+@import 'proboot/scss/variables';
+@import 'proboot/scss/core';
+@import 'proboot/scss/alert';
+@import 'proboot/scss/button';</code></pre>
 
         <h3 class="mt-lg-6">Using without SCSS</h3>
         <p>If you'd prefer to include a traditional CSS file, it is also included in the npm releases:</p>
@@ -84,13 +87,13 @@ $primary: '#800f02';
 
         <h3 class="mt-lg-6">Using without npm</h3>
         <p>If you don't want to install with npm, you can use a CDN-hosted compiled CSS file instead:</p>
-        <pre><code class="html">&lt;link rel="stylesheet" href="<a href="https://rawcdn.githack.com/Alanaktion/proboot/v0.2.0/dist/css/proboot.css" target="_blank" rel="noopener noreferrer">https://rawcdn.githack.com/Alanaktion/proboot/v0.2.0/dist/css/proboot.css</a>"&gt;</code></pre>
+        <pre><code class="html">&lt;link rel="stylesheet" href="<a href="https://unpkg.com/proboot@0.4/dist/css/proboot.css" target="_blank" rel="noopener noreferrer">https://unpkg.com/proboot@0.4/dist/css/proboot.css</a>"&gt;</code></pre>
         <p>Alternatively, just download the compiled CSS from the GitHub repo.</p>
     </section>
 
     <section class="container py-5" id="components">
         <h1>Components</h1>
-        <p>Proboot includes most of the components from <a href="https://tabler.github.io/tabler/" target="_blank" rel="noopener noreferrer">Tabler</a> that don't require additional JavaScript.</p>
+        <p>Proboot includes some of the components from early versions of <a href="https://tabler.github.io/tabler/" target="_blank" rel="noopener noreferrer">Tabler</a> that didn't require additional JavaScript.</p>
 
         <h3 class="mt-lg-6">Buttons</h3>
         <div class="card card-example">
@@ -186,15 +189,15 @@ $primary: '#800f02';
                     </div>
                     <div class="col-md">
                         <div class="form-label">Toggle switch</div>
-                        <div class="custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                            <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+                        <div class="form-check form-switch">
+                            <input type="checkbox" class="form-check-input" id="customSwitch1">
+                            <label class="form-check-label" for="customSwitch1">Toggle this switch element</label>
                         </div>
-                        <div class="custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" disabled id="customSwitch2">
-                            <label class="custom-control-label" for="customSwitch2">Disabled switch element</label>
+                        <div class="form-check form-switch">
+                            <input type="checkbox" class="form-check-input" disabled id="customSwitch2">
+                            <label class="form-check-label" for="customSwitch2">Disabled switch element</label>
                         </div>
-                        <p class="alert alert-info mt-3 mb-0"><b>Heads up!</b> Switches changed in Proboot 0.2 to use Bootstrap 4.2's new switch component. HTML from before 0.2 will need to be updated.</p>
+                        <p class="alert alert-info mt-3 mb-0"><b>Heads up!</b> Switches changed in Proboot 0.2 to use Bootstrap's switch component. HTML from before 0.2 will need to be updated.</p>
                     </div>
                 </div>
             </div>
@@ -218,23 +221,25 @@ $primary: '#800f02';
     &lt;/label&gt;
 &lt;/div&gt;
 
-&lt;div class="custom-control custom-switch"&gt;
-    &lt;input type="checkbox" class="custom-control-input" id="customSwitch1"&gt;
-    &lt;label class="custom-control-label" for="customSwitch1"&gt;Toggle this switch element&lt;/label&gt;
+&lt;div class="form-check form-switch"&gt;
+    &lt;input type="checkbox" class="form-check-input" id="customSwitch1"&gt;
+    &lt;label class="form-check-label" for="customSwitch1"&gt;Toggle this switch element&lt;/label&gt;
 &lt;/div&gt;
-&lt;div class="custom-control custom-switch"&gt;
-    &lt;input type="checkbox" class="custom-control-input" disabled id="customSwitch2"&gt;
-    &lt;label class="custom-control-label" for="customSwitch2"&gt;Disabled switch element&lt;/label&gt;
+&lt;div class="form-check form-switch"&gt;
+    &lt;input type="checkbox" class="form-check-input" disabled id="customSwitch2"&gt;
+    &lt;label class="form-check-label" for="customSwitch2"&gt;Disabled switch element&lt;/label&gt;
 &lt;/div&gt;</code></pre>
             </div>
         </div>
 
-        <div class="alert alert-info mt-lg-7">More details on available components and their usage is coming soon! Check out the <a href="https://tabler.github.io/tabler/" class="alert-link" target="_blank" rel="noopener noreferrer">Tabler docs</a> for now.</div>
+        <div class="alert alert-info mt-lg-5">
+            Some components and defaults are not yet documented. The <a href="https://tabler-old.netlify.app/docs/" class="alert-link" target="_blank" rel="noopener noreferrer">old Tabler documentation</a> includes some of that information.
+        </div>
     </section>
 
-    <footer class="bg-light mt-5 mt-lg-7 py-5">
+    <footer class="bg-light mt-5 py-5">
         <div class="container">
-            &copy; 2018
+            &copy; 2025
         </div>
     </footer>
 </body>
