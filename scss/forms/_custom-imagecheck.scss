@@ -37,7 +37,9 @@
     pointer-events: none;
     content: "";
     user-select: none;
-    background: $primary $custom-checkbox-indicator-icon-checked no-repeat center center/50% 50%;
+    background:
+      $primary $custom-checkbox-indicator-icon-checked no-repeat
+      center center/50% 50%;
     border-radius: 3px;
     opacity: 0;
     transition: .3s opacity;

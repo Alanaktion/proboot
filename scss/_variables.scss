@@ -1,14 +1,10 @@
-@use 'sass:color';
-@use 'sass:math';
+@use "sass:color";
+@use "sass:math";
 
 // Options
-$enable-rounded: true !default;
-$enable-shadows: false !default;
-$enable-gradients: false !default;
-$enable-transitions: true !default;
-$enable-hover-media-query: false !default;
-$enable-grid-classes: true !default;
-$enable-print-styles: true !default;
+$enable-negative-margins: true !default;
+$enable-cssgrid: true !default;
+$enable-dark-mode: false !default;
 
 // Fonts
 // stylelint-disable value-keyword-case
@@ -20,8 +16,6 @@ $font-size-base: .9375rem !default;
 $font-size-lg: 1.125rem !default;
 $font-size-sm: .875rem !default;
 
-$line-height-base: 1.5 !default;
-
 $h1-font-size: 2rem !default; // 32px
 $h2-font-size: 1.75rem !default; // 28px
 $h3-font-size: 1.5rem !default; // 24px
@@ -32,15 +26,17 @@ $h6-font-size: .875rem !default; // 14px
 $small-font-size: 87.5% !default;
 
 $headings-margin-bottom: .66em !default;
-// $headings-font-family: inherit !default;
 $headings-font-weight: 600 !default;
 $headings-line-height: 1.1 !default;
-// $headings-color: inherit !default;
 
-$display1-size: 4.5rem !default;
-$display2-size: 4rem !default;
-$display3-size: 3.5rem !default;
-$display4-size: 3rem !default;
+$display-font-sizes: (
+  1: 4.5rem,
+  2: 4rem,
+  3: 3.5rem,
+  4: 3rem,
+  5: 2.5rem,
+  6: 2rem
+) !default;
 
 // Colors
 $gray-100: #f8f9fa !default;
@@ -65,7 +61,6 @@ $lime: #7bd235 !default;
 $green: #5eba00 !default;
 $teal: #2bcbba !default;
 $cyan: #17a2b8 !default;
-
 
 $text-muted: #9aa0ac !default;
 $text-muted-dark: #6e7687 !default;
@@ -113,35 +108,29 @@ $theme-colors: (
 $social-colors: (
   "facebook": #3b5998,
   "twitter": #1da1f2,
-  "google": #dc4e41,
+  "x": #000,
+  "google": #4285f4,
   "youtube": #f00,
-  "vimeo": #1ab7ea,
-  "dribbble": #ea4c89,
   "github": #181717,
   "instagram": #e4405f,
   "pinterest": #bd081c,
   "vk": #6383a8,
   "rss": #ffa500,
-  "flickr": #0063dc,
-  "bitbucket": #0052cc,
 ) !default;
 
 $body-bg: #f5f7fb !default;
 $body-color: $gray-700 !default;
 
 // Code
-$code-font-size: 85% !default;
-// $code-color: inherit !default;
-
-$kbd-color: #fff !default;
+$kbd-color: $white !default;
 $kbd-bg: $gray-800 !default;
 
 $pre-color: $gray-900 !default;
 
 // Yiq
-$yiq-contrasted-threshold: 190 !default;
-$yiq-text-dark: $body-color !default;
-$yiq-text-light: $white !default;
+$min-contrast-ratio: 2.2 !default;
+$color-contrast-dark: $body-color !default;
+$color-contrast-light: $white !default;
 
 // Buttons
 $input-line-height: math.div(24, 15) !default;
@@ -167,7 +156,7 @@ $border-color: rgba(0, 40, 100, .12) !default;
 $border-color-dark: rgba(0, 40, 100, .24) !default;
 
 // Inputs
-$input-bg: #fff !default;
+$input-bg: $white !default;
 $input-height: 2.375rem !default;
 
 $input-color: $gray-700 !default;
@@ -201,7 +190,7 @@ $container-max-widths: (
 
 // Header
 $header-bg: #0667d0 !default;
-$header-color: #fff !default;
+$header-color: $white !default;
 $header-height: 4.5rem !default;
 
 // Cards
@@ -267,7 +256,7 @@ $custom-select-padding-x: .75rem !default;
 $custom-select-indicator-color: #999 !default;
 $custom-select-indicator: url("data:image/svg+xml !default;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5'%3E%3Cpath fill='#{$custom-select-indicator-color}' d='M0 0L10 0L5 5L0 0'/%3E%3C/svg%3E") !default;
 
-$custom-checkbox-indicator-icon-checked: url("data:image/svg+xml !default;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5'%3E%3Cpath fill='#999' d='M0 0L10 0L5 5L0 0'/%3E%3C/svg%3E") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%235eba00' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+$custom-checkbox-indicator-icon-checked: url("data:image/svg+xml !default;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5'%3E%3Cpath fill='#999' d='M0 0L10 0L5 5L0 0'/%3E%3C/svg%3E") no-repeat right .75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%235eba00' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
 
 // Aside
 $aside-width: 22rem !default;
@@ -275,7 +264,7 @@ $aside-width: 22rem !default;
 // List group
 $list-group-border-color: $border-color !default;
 $list-group-active-color: $primary !default;
-$list-group-active-bg: color.mix($primary, #fff, 4%) !default;
+$list-group-active-bg: color.mix($primary, $white, 4%) !default;
 $list-group-active-border-color: $list-group-border-color !default;
 
 // Popovers
@@ -293,7 +282,7 @@ $badge-font-weight: 600 !default;
 $hr-border-color: $border-color !default;
 
 // Thumbnails
-$thumbnail-bg: #fff !default;
+$thumbnail-bg: $white !default;
 
 // Pagination
 $pagination-color: $body-color !default;
@@ -305,6 +294,6 @@ $nav-tabs-link-active-bg: transparent !default;
 // Select Group
 $selectgroup-color: $text-muted !default;
 $selectgroup-border-color: $input-border-color !default;
-$selectgroup-active-bg: color.mix(#fff, $primary, 90%) !default;
+$selectgroup-active-bg: color.mix($white, $primary, 90%) !default;
 $selectgroup-active-color: $primary !default;
 $selectgroup-active-border-color: $primary !default;

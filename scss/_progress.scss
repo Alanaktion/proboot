@@ -1,4 +1,4 @@
-@use 'sass:math';
+@use "sass:math";
 
 @keyframes indeterminate {
   0% {
@@ -51,15 +51,18 @@
   }
 
   &::before {
-    animation: indeterminate 2.1s cubic-bezier(.65, .815, .735, .395) infinite;
+    animation:
+      indeterminate 2.1s cubic-bezier(.65, .815, .735, .395)
+      infinite;
   }
 
   &::after {
-    animation: indeterminate-short 2.1s cubic-bezier(.165, .84, .44, 1) infinite;
+    animation:
+      indeterminate-short 2.1s cubic-bezier(.165, .84, .44, 1)
+      infinite;
     animation-delay: 1.15s;
   }
 }
-
 
 @keyframes loader {
   from {
@@ -70,7 +73,6 @@
     transform: rotate(360deg);
   }
 }
-
 
 /**
 Dimmer

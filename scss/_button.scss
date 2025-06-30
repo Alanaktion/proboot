@@ -7,7 +7,8 @@
 
   i {
     font-size: 1rem;
-    vertical-align: -2px;
+    margin-top: -1px;
+    margin-bottom: -1px;
   }
 }
 
@@ -18,7 +19,11 @@
 }
 
 .btn-secondary {
-  @include button-variant(#fff, $input-border-color, #f6f6f6);
+  @include button-variant(
+    #fff,
+    $input-border-color,
+    $hover-background: #f6f6f6
+  );
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .05);
 }
 
@@ -69,20 +74,6 @@
   font-weight: 400;
 }
 
-.btn-list {
-  margin-bottom: -.5rem;
-  font-size: 0;
-
-  > .btn,
-  > .dropdown {
-    margin-bottom: .5rem;
-
-    &:not(:last-child) {
-      margin-right: .5rem;
-    }
-  }
-}
-
 .btn-loading {
   position: relative;
   color: transparent !important;
@@ -104,7 +95,7 @@
     animation: loader 500ms infinite linear;
   }
 
-  &.btn-sm::after{
+  &.btn-sm::after {
     top: calc(50% - (1em / 2));
     left: calc(50% - (1em / 2));
     width: 1em;
@@ -112,6 +103,6 @@
   }
 
   &.btn-secondary::after {
-    border-color: $yiq-text-dark;
+    border-color: $color-contrast-dark;
   }
 }

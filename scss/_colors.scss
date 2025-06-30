@@ -1,4 +1,4 @@
-@use 'sass:color';
+@use "sass:color";
 
 @each $color, $value in $colors {
   @include bg-variant(".bg-#{$color}-lightest", color.mix($value, #fff, 10%));

@@ -1,13 +1,4 @@
-// stylelint-disable declaration-no-important
-@use 'sass:color';
-
-
-// @mixin hover-focus {
-//   &:hover,
-//   &:focus {
-//     @content;
-//   }
-// }
+@use "sass:color";
 
 // Contextual backgrounds
 @mixin bg-variant($parent, $color) {
